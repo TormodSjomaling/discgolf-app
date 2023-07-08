@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>discgolf_app</RootNamespace>
+    <RootNamespace>discgolf-app-api</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +26,7 @@
   </ItemGroup>
 
     <ItemGroup>
-	    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+	    <ProjectReference Include="..\DataAccess\discgolf-app-dataaccess.csproj" />
     </ItemGroup>
 
 </Project>

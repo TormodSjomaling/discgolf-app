@@ -859,7 +859,7 @@
           }
         }
       },
-      "DataAccess/1.0.0": {
+      "discgolf-app-dataaccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -869,10 +869,10 @@
           "supabase-csharp": "0.12.1"
         },
         "compile": {
-          "bin/placeholder/DataAccess.dll": {}
+          "bin/placeholder/discgolf-app-dataaccess.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DataAccess.dll": {}
+          "bin/placeholder/discgolf-app-dataaccess.dll": {}
         }
       }
     }
@@ -3164,19 +3164,19 @@
         "websocket.client.nuspec"
       ]
     },
-    "DataAccess/1.0.0": {
+    "discgolf-app-dataaccess/1.0.0": {
       "type": "project",
-      "path": "../DataAccess/DataAccess.csproj",
-      "msbuildProject": "../DataAccess/DataAccess.csproj"
+      "path": "../DataAccess/discgolf-app-dataaccess.csproj",
+      "msbuildProject": "../DataAccess/discgolf-app-dataaccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.1",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.Extensions.Configuration.Json >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0",
+      "discgolf-app-dataaccess >= 1.0.0",
       "supabase-csharp >= 0.12.1"
     ]
   },
@@ -3187,9 +3187,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\discgolf-app\\discgolf-app.csproj",
-      "projectName": "discgolf-app",
-      "projectPath": "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\discgolf-app\\discgolf-app.csproj",
+      "projectUniqueName": "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\discgolf-app\\discgolf-app-api.csproj",
+      "projectName": "discgolf-app-api",
+      "projectPath": "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\discgolf-app\\discgolf-app-api.csproj",
       "packagesPath": "C:\\Users\\Tormod\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\discgolf-app\\obj\\",
       "projectStyle": "PackageReference",
@@ -3212,8 +3212,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\DataAccess\\discgolf-app-dataaccess.csproj": {
+              "projectPath": "C:\\Users\\Tormod\\EgneProsjekt\\discgolf-app\\DataAccess\\discgolf-app-dataaccess.csproj"
             }
           }
         }

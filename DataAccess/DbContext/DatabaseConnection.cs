@@ -1,6 +1,6 @@
 ﻿using Supabase;
 
-namespace DataAccess.DbContext
+namespace discgolf_app_dataaccess.DbContext
 {
     public class DatabaseConnection
     {

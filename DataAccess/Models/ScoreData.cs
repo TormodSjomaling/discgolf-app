@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DataAccess.Models
+﻿namespace discgolf_app_dataaccess.Models
 {
     public class ScoreData
     {

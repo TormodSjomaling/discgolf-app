@@ -1,7 +1,7 @@
 ﻿using Postgrest.Attributes;
 using Postgrest.Models;
 
-namespace DataAccess.Models
+namespace discgolf_app_dataaccess.Models
 {
     [Table("player")]
     public class Player : BaseModel

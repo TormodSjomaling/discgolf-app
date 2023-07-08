@@ -1,7 +1,7 @@
-﻿using DataAccess.Models;
+﻿using discgolf_app_dataaccess.Models;
 using Microsoft.AspNetCore.Http;
 
-namespace DataAccess.Mappers
+namespace discgolf_app_dataaccess.Mappers
 {
     public interface ICsvMapper
     {

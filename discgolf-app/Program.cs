@@ -1,4 +1,4 @@
-using DataAccess.Mappers;
+using discgolf_app_dataaccess.Mappers;
 using Supabase;
 
 var builder = WebApplication.CreateBuilder(args);

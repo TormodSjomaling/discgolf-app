@@ -1,9 +1,9 @@
-﻿using DataAccess.Mappers;
-using DataAccess.Models;
+﻿using discgolf_app_dataaccess.Mappers;
+using discgolf_app_dataaccess.Models;
 using Microsoft.AspNetCore.Mvc;
 using Supabase;
 
-namespace discgolf_app.Controllers
+namespace discgolf_app_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
