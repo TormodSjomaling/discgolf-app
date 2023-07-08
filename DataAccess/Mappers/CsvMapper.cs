@@ -1,7 +1,9 @@
-﻿using Microsoft.VisualBasic.FileIO;
+﻿using DataAccess.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.VisualBasic.FileIO;
 using System.Globalization;
 
-namespace discgolf_app.Helpers
+namespace DataAccess.Mappers
 {
     public class CsvMapper : ICsvMapper
     {
