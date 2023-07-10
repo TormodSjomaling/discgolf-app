@@ -1,3 +1,4 @@
+using discgolf_app_dataaccess.DbContext;
 using discgolf_app_dataaccess.Mappers;
 using Supabase;
 
@@ -14,6 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ICsvMapper, CsvMapper>();
+builder.Services.AddTransient<IDatabaseConnection, DatabaseConnection>();
 builder.Services.AddSingleton<Client>(sp =>
 {
     var supabaseUrl = configuration["Supabase:Url"];

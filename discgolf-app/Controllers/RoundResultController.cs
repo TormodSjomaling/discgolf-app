@@ -1,5 +1,7 @@
-﻿using discgolf_app_dataaccess.Mappers;
+﻿using discgolf_app_dataaccess.DbContext;
+using discgolf_app_dataaccess.Mappers;
 using discgolf_app_dataaccess.Models;
+using discgolf_app_dataaccess.Models.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Supabase;
 
@@ -12,15 +14,15 @@ namespace discgolf_app_api.Controllers
 
         private readonly ILogger<RoundResultController> _logger;
         private readonly ICsvMapper _csvMapper;
-        private readonly Client _supabaseClient;
+        private readonly IDatabaseConnection _dbClient;
 
-        public RoundResultController(ILogger<RoundResultController> logger, ICsvMapper csvMapper, Client supabaseClient)
+        public RoundResultController(ILogger<RoundResultController> logger, ICsvMapper csvMapper, IDatabaseConnection dbClient)
         {
             _logger = logger;
             _csvMapper = csvMapper;
-            _supabaseClient = supabaseClient;
+            _dbClient = dbClient;
         }
-        
+
         [HttpPost]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> Post(IFormFile file)
@@ -30,12 +32,14 @@ namespace discgolf_app_api.Controllers
                 return BadRequest("File is not a csv file");
             }
 
-            var x = await _supabaseClient.From<Player>().Get();
-            var models = x.Models[0];
-
-            //var round = await _csvMapper.CsvToModelMapper(file);
-
-            return Created("", models);
+            var round = await _csvMapper.CsvToModelMapper(file);
+            var x = new PlayerDto
+            {
+                Name = round.CourseInfo.CourseName
+            };
+            
+            var result = await _dbClient.PostRound(x);
+            return Ok(result);
         }
     }
 }
