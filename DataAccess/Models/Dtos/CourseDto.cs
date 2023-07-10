@@ -6,6 +6,9 @@ namespace discgolf_app_dataaccess.Models.Dtos
     [Table("course")]
     public class CourseDto : BaseModel
     {
+        [PrimaryKey("course_id")]
+        public int CourseId { get; set; }
+        
         [Column("name")]
         public string Name { get; set; }
 

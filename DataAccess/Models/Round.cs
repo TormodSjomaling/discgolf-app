@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Postgrest.Models;
+using System;
 
 namespace discgolf_app_dataaccess.Models
 {

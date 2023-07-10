@@ -31,14 +31,14 @@ namespace discgolf_app_api.Controllers
             {
                 return BadRequest("File is not a csv file");
             }
-
+            
             var round = await _csvMapper.CsvToModelMapper(file);
-            var x = new PlayerDto
+            var x = new HoleDto
             {
-                Name = round.CourseInfo.CourseName
+                CourseId = round.CourseInfo.CoursePar
             };
             
-            var result = await _dbClient.PostRound(x);
+            var result = await _dbClient.PostRound(round);
             return Ok(result);
         }
     }

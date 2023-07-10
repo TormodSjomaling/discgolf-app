@@ -1,9 +1,10 @@
-﻿using discgolf_app_dataaccess.Models.Dtos;
+﻿using discgolf_app_dataaccess.Models;
+using discgolf_app_dataaccess.Models.Dtos;
 
 namespace discgolf_app_dataaccess.DbContext
 {
     public interface IDatabaseConnection
     {
-        Task<PlayerDto> PostRound(PlayerDto round);
+        Task<Round> PostRound(Round round);
     }
 }

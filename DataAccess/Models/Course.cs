@@ -1,6 +1,9 @@
-﻿namespace discgolf_app_dataaccess.Models
+﻿using Postgrest.Attributes;
+using Postgrest.Models;
+
+namespace discgolf_app_dataaccess.Models
 {
-    public class Course
+    public class Course : BaseModel
     {
         public string CourseName { get; set; }
         public string LayoutName { get; set; }
